@@ -34,3 +34,4 @@ const transaction = (type, {label, stock}) => {
 }
 
 transaction('order', product)
+
