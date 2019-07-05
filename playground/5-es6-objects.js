@@ -29,9 +29,9 @@ const product = {
 // console.log(rating);
 
 
-const transaction = (type, {label, stock}) => {
+const transaction = (type, {label, stock} = {}) => {
     console.log(type , stock, label);
 }
 
-transaction('order', product)
+transaction('order')
 
