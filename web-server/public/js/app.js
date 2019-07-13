@@ -20,7 +20,14 @@ weatherForm.addEventListener('submit', (e) => {
             messageOne.textContent = data.error;
         } else{
             messageOne.textContent = data.location 
-            messageTwo.textContent = data.forecast 
+            //messageTwo.textContent = data.forecast 
+            if(data){
+                console.table(data.forecast.daily.icon)
+                if(data.forecast.daily.icon==='rain'){
+                    document.querySelector('body').style.backgroundColor = "red";
+                }
+            }
+            //document.querySelector('body').style.backgroundColor = "red";
         }
     })
 })
